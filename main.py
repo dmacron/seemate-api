@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 logger.info("Loading image captioning model...")
 try:
     # Using smaller, faster model for Railway deployment
-    pipe = pipeline("image-to-text", model="Salesforce/blip-image-captioning-base")
+     pipe = pipeline("image-to-text", model="nlpconnect/vit-gpt2-image-captioning")
     logger.info("✅ Model loaded successfully!")
 except Exception as e:
     logger.error(f"❌ Failed to load model: {e}")
